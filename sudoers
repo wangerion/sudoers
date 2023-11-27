@@ -1,0 +1,26 @@
+
+## Next comes the main part: which users can run what software on
+## which machines (the sudoers file can be shared between multiple
+## systems).
+## Syntax:
+##
+##      user    MACHINE=COMMANDS
+##
+## The COMMANDS section may have other options added to it.
+##
+## Allow root to run any commands anywhere 
+root    ALL=(ALL)       ALL
+user1,blabla    ALL=(ALL)       ALL
+# user
+nljh3     ldr1,ldr2    = (root) NOPASSWD: /sysman/tools/change_passwd,        \
+                                                   /sysman/operators/mount_windows_data,        \
+                                                   /sysman/operators/umount_windows_data
+nljh2     ldr1,ldr2    = (root) NOPASSWD: /sysman/tools/change_passwd,        \
+                                                   /sysman/operators/mount_windows_data,        \
+                                                   /sysman/operators/umount_windows_data
+
+
+
+
+
+
